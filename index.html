@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="register.js"></script>
+    <title>Form Validation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+
+            </div>
+            <div class="column_1">
+                <form id="registration">
+                    <input type="text" class="input" id="username" placeholder="Username*" />
+                    <p class="error" id="error_username" value=""></p>
+                    <input type="text" class="input" id="email" placeholder="Email*" />
+                    <p class="error" id="error_email" value=""></p>
+
+                    <input type="text" id="password" ng-model="password" class="input" id="password"
+                        placeholder="Password*" id="password" />
+                    <p class="error" id="error_password" value=""></p>
+
+                    <p>Password strength</p>
+                    <div id="passwordDescription"></div>
+                    <div class="indicator">
+                        <span id="weak" class="weak"></span>
+                        <span id="medium" class="medium"></span>
+                        <span id="strong" class="strong"></span>
+                    </div>
+                    <div id="meter"></div>
+                    <div class="col-2"></div>
+                    <p>Role*</p>
+                    <select class="input" id="role">
+                        <option value="" selected="" disabled="">Please select your role...</option>
+                        <option>Admin</option>
+                        <option>User</option>
+                    </select>
+                    <p class="error" id="error_role" value=""></p>
+
+
+                    <div>
+                        <div>
+                            System*
+                        </div>
+                        <div class="row">
+                            <div class="form-check" id="system" value="">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" value="Windows">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Windows
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2" value="Linux">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Linux
+                                </label>
+                            </div>
+                        </div>
+                        <p class="error" id="error_system" value=""></p>
+
+                    </div>
+
+
+                    <label for="disabledTextInput" class="form-label">Affiliation</label>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id='affiliation' value="RD">
+                        <label class="form-check-label" for="RD">R&D</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id='affiliation' value="Finance">
+                        <label class="form-check-label" for="Finance">Finance</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input " id='affiliation' value="Marketing">
+                        <label class="form-check-label" for="Marketing">Marketing</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id='affiliation' value="Management">
+                        <label class="form-check-label" for="Management">Management</label>
+                    </div>
+                    <br><br>
+                    <div>
+                        <button type="button" id="button-sign" onclick="Reg()">Sign up</button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="column_2">
+                <form id="output">
+                    <label>
+                        <strong>
+                            <p>Registeration Details: </p>
+                            <p>---------------------- </p>
+                        </strong>
+                    </label>
+                    <br>
+                    <label>
+                        <strong>
+                            <p>Username: </p>
+                        </strong>
+                    </label>
+                    <input class="form-control-2" type="text" id="output_username" value="" disabled="disabled" />
+                    <br>
+
+                    <label>
+                        <strong>
+                            <p>Email: </p>
+                        </strong>
+                    </label>
+                    <input type="text" class="form-control-2" id="output_email" disabled="disabled" value="" />
+                    <br>
+
+                    <label>
+                        <strong>
+                            <p>Password: </p>
+                        </strong>
+                    </label>
+                    <input type="text" class="form-control-2" id="output_password" disabled="disabled" value="" />
+                    <br>
+
+                    <label>
+                        <strong>
+                            <p>Role: </p>
+                        </strong>
+                    </label>
+                    <input type="text" class="form-control-2" id="output_role" disabled="disabled" value="" />
+                    <br>
+
+                    <label>
+                        <strong>
+                            <p>System: </p>
+                        </strong>
+                    </label>
+                    <input type="text" class="form-control-2" id="output_system" disabled="disabled" value="" />
+                    <br>
+
+                    <label>
+                        <strong>
+                            <p>Affiliation: </p>
+                        </strong>
+                    </label>
+                    <input type="text" class="form-control-2" id="output_affiliation" disabled="disabled" value="" />
+                </form>
+
+            </div>
+            <div class="col-2">
+
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
