@@ -1,2 +1,5 @@
 # Validation_form
-My first web validation form with output form.
+My first web validation.
+*output form.
+*password strength.
+*inputs required.
