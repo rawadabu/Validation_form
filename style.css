@@ -9,7 +9,7 @@ body{
   align-items: center;
   justify-content: space-around;
   min-height: 100vh;
-  background-image: url("html.gif");
+  background-image: url("html.gif");/*use any other background.*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -36,7 +36,7 @@ body{
   margin-left: auto;
   border-radius: 1%;
   min-height: 380px;
-  background-image: url("form1.jpg");
+  background-image: url("form1.jpg");/*use any other background.*/
   opacity: 0.9;
   background-position: center;
   background-repeat: no-repeat;
